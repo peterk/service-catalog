@@ -4,28 +4,49 @@
 <div class="container">
 	<div class="row">
         <div class="eightcol">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p><p> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>Tjänstekatalogen är tänkt att vara en central tjänstekatalog för alla Sveriges myndigheter och offentliga aktörer. Katalogen tillhandahåller de uppgifter som behövs för att hitta, förstå och använda respektive tjänst.</p>
+            <p>Tjänstekatalogen vänder sig till dig som arbetar med att ta fram nya e-stjänster och har som syfte att göra det enklare att återanvända information som redan finns istället för att be privatpersoner och företag att mata in den igen.</p>
         </div>
         <div class="fourcol last">
             <h2>Sök i katalogen</h2>
             <div class="search">
+                <label for="q">Sök efter:</label>
+                <p><input type="text" id="q" cols="50" />
+                <input type="submit" value="Sök" /></p>
+                <p>Du kan också <a href="/tjanst/alla">visa alla tjänster</a> på en sida.</p>
             </div>
         </div>
     </div>
 </div>
 <div class="container">
 	<div class="row">
-		<div class="fourcol panel">
-            <h2>Nya tjänster</h2>
-			<p>Four columns...</p>
+		<div class="fourcol">
+            <div class="panel">
+                <h2>Nya tjänster</h2>
+                <p>Senast inlagda tjänsterna:</p>
+                <ul class="services">
+	                {% for service in new_services %}
+                    <li><a href="/tjanst/{{service.contact_person.organization.slug}}/{{service.slug}}">{{service.name}}</a> av {{service.contact_person.organization.name}}</li>
+    	            {% endfor %}
+                </ul>
+            </div>
 		</div>
-		<div class="fourcol panel">
+		<div class="fourcol">
+            <div class="panel">
             <h2>Uppdaterade tjänster</h2>
-			<p>Four columns</p>
+			<p>Nyligen uppdaterade:</p>
+                <ul class="services">
+	                {% for service in updated_services %}
+                    <li><a href="/tjanst/{{service.contact_person.organization.slug}}/{{service.slug}}">{{service.name}}</a> av {{service.contact_person.organization.name}}</li>
+    	            {% endfor %}
+                </ul>
+            </div>
 		</div>
-		<div class="fourcol last panel">
+		<div class="fourcol last">
+            <div class="panel">
             <h2>Raportera ny tjänst</h2>
-			<p>Four columns</p>
+            <p>Saknar du dina tjänster i katalogen? Genom att anmäla tjänster till katalogen förenklar du för andra att återanvända din information. <a href="/">Kontakta xyz</a> för information om hur beskriver dina tjänster.</p>
+            </div>
 		</div>
 	</div>
 </div>

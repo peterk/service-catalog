@@ -5,16 +5,18 @@
 <body>
 <div class="container banner" role="banner">
     <div class="row">
-        <div class="logo">
-            <a href="/"><img src="/static/img/edelegationen-logo.gif" alt="Tjänstekatalogen"></a>
-        </div>
-        <div class="logotext">
+        <div class="sixcol">
+            <div class="logo">
+                <a href="/"><img src="/static/img/edelegationen-logo.gif" alt="Tjänstekatalogen"></a>
+            </div>
+            <div class="logotext">
                 Tjänstekatalogen<br>
                 <div class="logosubtext">E-delegationen</div>
+            </div>
         </div>
-    </div>
-    <div class="row">
-    {% include "topmenu.html" %}
+        <div class="sixcol last">
+            {% include "topmenu.html" %}
+        </div>
     </div>
 </div>
 <div class="container">

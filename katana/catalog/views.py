@@ -19,5 +19,8 @@ def index(request):
     #datasource_free_count = Dataset.objects.filter(license__is_free=True).count() 
     #datasource_api_count = Dataset.objects.filter(has_api=True).count() 
 
+    new_services = Service.objects.all().order_by("-id")[:10]
+    updated_services = Service.objects.all().order_by("-id")[:10]
+
     page_title = u"Välkommen!"
     return render_to_response('index.html', locals())
