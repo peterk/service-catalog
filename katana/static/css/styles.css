@@ -1,0 +1,117 @@
+/* ============================== */
+/* ! Layout for desktop version   */
+/* ============================== */
+
+body {
+    background-color: white;
+    color: black;
+    font-family: Georgia, serif;	
+    font-size: 16px;
+}
+
+h1, h2, h3 {
+    font-weight:normal;
+}
+
+p {
+    margin: 0 0 1em 0;
+}
+div.banner {
+    background-color: #007399;
+    background-image: url(http://beta.webbriktlinjer.se/lib/tpl/dwguideline-beta/images/header-flush.gif);
+    background-repeat: repeat-x;
+    margin-bottom: 1em;
+    min-height:100px;
+}
+
+.logo a img {
+    margin: 20px 20px 0px;
+    float:left;
+}
+.logotext {
+    color: white;
+    float: left;
+    font-family: 'Lucida Grande', Arial, sans-serif;
+    font-size: 32px;
+    padding-top:20px;
+}
+
+.logosubtext {
+    font-size: 0.7em;
+}
+ul.topmenu {
+    float:right;
+}
+ul.topmenu li {
+    height: 1.2em;
+    display:block;
+    float:left;
+    background-color: #e1e1e1;
+    margin-right: 10px;
+    padding: 10px 0 10px 0;
+}
+ul.topmenu li a {
+    margin: 10px 20px;
+    text-decoration:none;
+    color: #000;
+}
+	
+.search {
+    background-color: #ccc;
+    min-height: 100px;
+}
+
+.panel {
+    min-height: 300px;
+
+}
+
+div.sou {
+float: left;
+margin: 0px 40px 20px 0px;
+
+}
+
+address.vcard {
+float: left;
+font-size: 0.9em;
+font-style: normal;
+line-height: 1.6em;
+padding-top: 1em;
+width: 40%;
+}
+
+#ft {
+border-top: 1px solid #E0E0E0;
+color: #777;
+font-family: Georgia, 'Times New Roman', Times, serif;
+min-height: 100px;
+padding: 20px;
+}    
+
+
+/* ============================= */
+/* ! Layout for mobile version   */
+/* ============================= */
+
+@media handheld, only screen and (max-width: 767px) {
+
+	body {
+		
+	}
+
+}
+
+
+/* ========================================== */
+/* ! Provide higher res assets for iPhone 4   */
+/* ========================================== */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+
+/*	.logo {
+		background: url(logo2x.jpg) no-repeat;
+		background-size: 212px 303px;
+	}*/
+
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="sv">
+	{% include "html_head.html" %}    
+
+<body>
+<div class="container banner" role="banner">
+    <div class="row">
+        <div class="logo">
+            <a href="/"><img src="/static/img/edelegationen-logo.gif" alt="Tjänstekatalogen"></a>
+        </div>
+        <div class="logotext">
+                Tjänstekatalogen<br>
+                <div class="logosubtext">E-delegationen</div>
+        </div>
+    </div>
+    <div class="row">
+    {% include "topmenu.html" %}
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="elevencol">
+        {% if message %}<div id="flash"><p>{{message|safe}}</p></div>{% endif %}
+        <h1>{% ifequal page_h1 None %}{{page_title}}{% else %}{{page_h1}}{% endifequal %}</h1>
+        </div>
+        <div class="onecol last"></div>
+</div>
+</div>
+
+<div class="container">
+{% block content %}{% endblock %}
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div id="ft" role="contentinfo">{% include "site_footer.html" %}</div>
+    </div>
+</div>
+
+</body>
+
+</html>
+

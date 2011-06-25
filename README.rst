@@ -34,6 +34,13 @@ Installation
    (create superuser when asked)
 
 
+7. Start the application:
+
+   $ cd katana
+
+   $ python manage.py runserver
+
+   Now you can open the admin interface in your browser: http://127.0.0.1:8000/admin
 
 License
 -------

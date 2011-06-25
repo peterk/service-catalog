@@ -1,0 +1,11 @@
+<head>
+	<meta charset="utf-8" />
+	<title>{% block title %}{% if page_title %}{{page_title}}{% endif %}{% endblock %}</title>	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="/static/css/ie.css" type="text/css" media="screen" /><![endif]-->
+	<link rel="stylesheet" href="/static/css/1140.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/static/css/styles.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="/static/js/css3-mediaqueries.js"></script>
+	{% include "html_meta.html" %}
+	{% block htmlhead %}{% endblock %}
+</head>

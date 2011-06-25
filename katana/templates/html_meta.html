@@ -1,0 +1,6 @@
+<link rel="schema.DC" href="http://purl.org/DC/elements/1.0/">
+		{% if meta.description %}<meta name="DC.Description" content="{{meta.description}}">{% endif %}
+		{% if meta.keywords %}<meta name="DC.Subject" content="{{meta.keywords|join:","}}">{% endif %}
+		{% if meta.created %}<meta name="DC.Date.Created" scheme="W3CDTF" content="{{meta.created|date:"Y-m-d\TH:i:s\+01\:00"}}">{% endif %}
+		{% if meta.modified %}<meta name="DC.Date.Modified" scheme="W3CDTF" content="{{meta.modified|date:"Y-m-d\TH:i:s\+01\:00"}}">{% endif %}
+		{% if meta.language %}<meta name="DC.Language" scheme="RFC1766" content="{{meta.language}}">{% endif %}
