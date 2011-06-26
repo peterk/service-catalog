@@ -106,6 +106,10 @@ min-height: 100px;
 padding: 20px;
 }    
 
+span.label {
+    font-weight:bold;
+}
+
 
 /* ============================= */
 /* ! Layout for mobile version   */

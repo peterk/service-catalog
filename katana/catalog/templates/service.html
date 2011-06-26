@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+	<div class="row">
+        <div class="eightcol">
+            <p><span class="label">Livscykelstatus:</span> {{service.lifecycle_state.name}}<br>
+            <span class="label">Kategori:</span> <a href="/kategori/{{service.category.slug}}/">{{service.category.name}}</a>
+            </p>
+            <p>{{service.description}}</p>
+
+            <h2>Villkor för användning</h2>
+            <p>{{service.terms}}</p>
+            <p>{{service.price}}</p>
+
+            <h2>Tillgänglighet och övrig information</h2>
+            <p>{{service.availability}}</p>
+            <p>{{service.other}}</p>
+
+            <h2>Kontaktperson</h2>
+            <p>{{service.contact_person.name}}<br>
+            {{service.contact_person.organization.name}}<br>
+            {{service.contact_person.email}}<br>
+            {{service.contact_person.phone}}</p>
+
+
+            <h2>Teknisk beskrivning</h2>
+            <p><span class="label">Version:</span> {{service.version}}</p>
+            <p><span class="label">Protokoll:</span> {{service.protocol}}</p>
+            <p><span class="label">Inloggning:</span> {{service.authentication}}</p>
+            <p><span class="label">URL ändpunkt:</span> {{service.URL_service}}</p>
+            <p><span class="label">URL testversion:</span> {{service.URL_test}}</p>
+            <p><span class="label">URL infosida:</span> {{service.URL_info}}</p>
+
+            <p><span class="label">Nyckelord:</span> {{service.keywords}}</p>
+
+        </div>
+        <div class="fourcol last">
+            <h2>Relaterade tjänster</h2>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

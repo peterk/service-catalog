@@ -11,7 +11,7 @@
             <h2>Sök i katalogen</h2>
             <div class="search">
                 <label for="q">Sök efter:</label>
-                <p><input type="text" id="q" cols="50" />
+                <p><input type="text" id="q" class="" />
                 <input type="submit" value="Sök" /></p>
                 <p>Du kan också <a href="/tjanst/alla">visa alla tjänster</a> på en sida.</p>
             </div>
@@ -26,7 +26,7 @@
                 <p>Senast inlagda tjänsterna:</p>
                 <ul class="services">
 	                {% for service in new_services %}
-                    <li><a href="/tjanst/{{service.contact_person.organization.slug}}/{{service.slug}}">{{service.name}}</a> av {{service.contact_person.organization.name}}</li>
+                    <li><a href="/tjanst/{{service.id}}/">{{service.name}}</a> av {{service.contact_person.organization.name}}</li>
     	            {% endfor %}
                 </ul>
             </div>
@@ -37,7 +37,7 @@
 			<p>Nyligen uppdaterade:</p>
                 <ul class="services">
 	                {% for service in updated_services %}
-                    <li><a href="/tjanst/{{service.contact_person.organization.slug}}/{{service.slug}}">{{service.name}}</a> av {{service.contact_person.organization.name}}</li>
+                    <li><a href="/tjanst/{{service.id}}/">{{service.name}}</a> av {{service.contact_person.organization.name}}</li>
     	            {% endfor %}
                 </ul>
             </div>

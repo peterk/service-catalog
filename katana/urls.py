@@ -8,5 +8,6 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
  	(r'^$', include('katana.catalog.urls')),
+ 	(r'^tjanst/', include('katana.catalog.urls')),
     (r'^admin/', include(admin.site.urls)),
 )

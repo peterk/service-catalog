@@ -8,5 +8,11 @@ catalogindex = url(
     name   = 'vwcatalogindex'
 )
 
-urlpatterns = patterns('', catalogindex)
+catalogservice = url(
+    regex  = '^(?P<service_id>\d+)/$',
+    view   = 'katana.catalog.views.service',
+    name   = 'vwcatalogservice'
+)
+
+urlpatterns = patterns('', catalogindex, catalogservice)
 
